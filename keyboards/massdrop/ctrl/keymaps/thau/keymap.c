@@ -190,12 +190,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 void rgb_matrix_indicators_user(void)
 {
-    /*
-    rgb_matrix_set_color_all(0xFF, 0xFF, 0xFF);
-
-    // Set CAPS_LOCK to RED to signal that it's ESC
-    rgb_matrix_set_color(50, 0xFF, 0x00, 0x00);
-     */
+    // Disable the bottom lights
+    rgb_matrix_set_color_all(0x00, 0x00, 0x00);
 
 	uint16_t layer_number = biton32(layer_state);
 
